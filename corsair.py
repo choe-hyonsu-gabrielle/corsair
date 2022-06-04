@@ -9,7 +9,7 @@ try:
     from tqdm import tqdm
     from openpyxl import Workbook
 except ModuleNotFoundError as e:
-    print('[Corsair] Need to install requirements. Type "pip install tqdm openpyxl" on your console and retry.')
+    print('[Corsair] Need to install requirements. Type "pip install tqdm openpyxl" on your terminal and retry.')
     raise e
 
 
