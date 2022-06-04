@@ -1,5 +1,5 @@
 # corsair
-A lightweight concordance view for NIKL "Modu" Corpora.
+A lightweight concordance tool for NIKL "Modu" Corpora.
 
 
 ### Requirements
