@@ -80,19 +80,19 @@ $ python corsair.py --dir ./YOUR_AWESOME_DATA/*.json --window_size 5 --map_windo
 ```
 
 #### 형태 분석 시퀀스를 기준으로 Bigram 정규식 검색 결과를 Excel 파일로 저장 
-```[Corsair] >>> -posx ^회사.* .*/MAG```
+```[Corsair] >>> -posx .*/J. ../V```
 ```commandline
-27    ./SXMP1902008031.json    SBRW1800000032.499     3  회사/NNG+들/XSN+이/JKS 아직/MAG+까지/JX (회사들이 아직까지)  노동조합/NNG+을/JKO 싫어하/VV+는/ETM 회사/NNG+들/XSN+이/JKS 아직/MAG+까지/JX 많이/MAG 있/VA+습니다/EF                      노동조합을 싫어하는 회사들이 아직까지 많이 있습니다                  
-28    ./SXMP1902008031.json    SBRW1800000032.543     2  회사/NNG+에서/JKB 정말/MAG (회사에서 정말)                     또는/MAG 회사/NNG+에서/JKB 정말/MAG 꼴찌/NNG+에서/JKB 오/NR 프로/NNB+이/VCP+ㄴ/ETM 애/NNG+들/XSN 정도/NNG+로/JKB ⋯                       또는 회사에서 정말 꼴찌에서 오 ⋯                 
-29    ./SXMP1902008031.json    SBRW1800000032.583     6  회사/NNG+들/XSN+은/JX 좀/MAG (회사들은 좀)  최고/NNG 높/VA+은/ETM 임금/NNG+이나/JC 근로/NNG+조건/NNG+을/JKO 적용/NNG+하/XSV+는/ETM 회사/NNG+들/XSN+은/JX 좀/MAG                                       ⋯ 근로조건을 적용하는 회사들은 좀                          
-30    ./SXMP1902008031.json    SBRW1800000032.586     3  회사/NNG+는/JX 좀/MAG (회사는 좀)          저런/MMD 좋/VA+은/ETM 회사/NNG+는/JX 좀/MAG 칭찬/NNG+도/JX 하/VV+아/EC 주/VX+고/EC 지원/NNG+하/XSV+아/EC+주/VX+고/EC                    저런 좋은 회사는 좀 칭찬도 해 ⋯                  
-31    ./SXMP1902008031.json    SDRW1800000006.1570    5  회사/NNG+다니/VV+면/EC 보통/MAG (회사다니면 보통)  근데/MAJ 자기/NP+도/JX 지금/MAG 원래/MAG 회사/NNG+다니/VV+면/EC 보통/MAG 하/VV+라고/EC 나오/VV+잖아/EF+./SF                  ⋯ 지금 원래 회사다니면 보통 하라고 나오잖아.                
-32    ./SXMP1902008031.json    SDRW1800000007.244     9  회사/NNG+들/XSN+이/JKS 되게/MAG (회사들이 되게)  ⋯ 지금/MAG 나/NP 공고/NNG+에/JKB 보/VV+니까/EC 뽑/VV+는/ETM 회사/NNG+들/XSN+이/JKS 되게/MAG 많/VA+아/EF                                 ⋯ 보니까 뽑는 회사들이 되게 많아                       
-33    ./SXMP1902008031.json    SDRW1800000007.980     4  회사/NNG 다/MAG (회사 다)  딸/NNG 하나/NR+이/VCP+ㄴ데/EC 그/MMD 회사/NNG 다/MAG 사위/NNG+한테/JKB 다/MAG 주/VV+어야/EC 되/VV+어/EF                  ⋯ 하난데 그 회사 다 사위한테 다 ⋯                 
-34    ./SXMP1902008031.json    SDRW1800000009.648     2  회사원/NNG+들/XSN+도/JX 엄청/MAG (회사원들도 엄청)                    그래서/MAJ 회사원/NNG+들/XSN+도/JX 엄청/MAG 많/VA+잖아/EF+./SF                                그래서 회사원들도 엄청 많잖아.                     
-35    ./SXMP1902008031.json    SDRW1800000018.885     2  회사/NNG+도/JX 안/MAG (회사도 안)                 내/NP+가/JKS 회사/NNG+도/JX 안/MAG 다니/VV+고/EC 집/NNG+에서/JKB                         내가 회사도 안 다니고 집에서                  
-36    ./SXMP1902008031.json    SDRW1800000030.454     6  회사/NNG+에서/JKB 막/MAG (회사에서 막)  회사/NNG 일/NNG+만/JX 바쁘/VA+고/EC 그냥/MAG 항상/MAG 회사/NNG+에서/JKB 막/MAG 야근/NNG+하/XSV+고/EC 막/MAG 이렇/VA+게/EC 오/VV+니까/EC 좀/MAG ⋯                  ⋯ 그냥 항상 회사에서 막 야근하고 막 ⋯                 
-[Corsair] Query: ^회사.* .*/MAG (36 results)
-[Corsair] Top-10 frequency: [('회사/NNG+를/JKO 다/MAG', 1), ('회사/NNG+를/JKO 그만/MAG', 1), ('회사/NNG+를/JKO 안/MAG', 1), ('회사/NNG+에/JKB 다/MAG', 1), ('회사/NNG+에/JKB 지금/MAG', 1), ('회사/NNG+에서/JKB 너무/MAG', 1), ('회사/NNG 좀/MAG', 1), ('회사/NNG+와/JKB 함께/MAG', 1), ('회사/NNG+도/JX 좀/MAG', 1), ('회사/NNG 또는/MAG', 1)] ⋯
-[Corsair] Saved 36 results to file: "corsair_export-2022-06-04-19.16.27.xlsx"
+6302  ./SXMP1902008031.json    SDRW1800000030.950     9  그것/NP+도/JX 무섭/VA+어서/EC (그것도 무서워서)  ⋯ 무슨/MMD 커피/NNG+잔/NNG 타/VV+는/ETM 거/NNB 있/VA+지/EF 그것/NP+도/JX 무섭/VA+어서/EC 내/NP+가/JKS 못/MAG 타/VV+았/EP+다네/EF                   ⋯ 거 있지 그것도 무서워서 내가 못 ⋯                   
+6303  ./SXMP1902008031.json    SDRW1800000030.1004    3  홍콩/NNP+도/JX 나쁘/VA+지/EC (홍콩도 나쁘지)               그래서/MAJ 어/IC 홍콩/NNP+도/JX 나쁘/VA+지/EC 않/VX+다/EF                                    그래서 어 홍콩도 나쁘지 않다                       
+6304  ./SXMP1902008031.json    SDRW1800000030.1015    7  노래/NNG+도/JX 그렇/VA+고/EC (노래도 그렇고)  ⋯ 그거/NP 한국인/NNG+이/JKS 제일/MAG 잘/MAG+하/XSV+ㄴ대/EF 그/IC 노래/NNG+도/JX 그렇/VA+고/EC 어디/NP+다/JX 가/VV+면/EC 한국인/NNG+이/JKS 제일/MAG 잘/MAG+하/XSV+ㄴ대/EF                  ⋯ 잘한대 그 노래도 그렇고 어디다 가면 ⋯                 
+6305  ./SXMP1902008031.json    SDRW1800000030.1054    2  나/NP+ㄴ/JX 끊기/VV+어/EF+?/SF (난 끊겨?)                       어/IC 나/NP+ㄴ/JX 끊기/VV+어/EF+?/SF                                                  어 난 끊겨?                          
+6306  ./SXMP1902008031.json    SDRW1800000030.1058    3  거/NNB+는/JX 어떻/VA+어/EF (거는 어때)  무대/NNG+매너/NNG+나/JC 이런/MMD 거/NNB+는/JX 어떻/VA+어/EF                                           무대매너나 이런 거는 어때                          
+6307  ./SXMP1902008031.json    SDRW1800000030.1062    1  입시/NNG+생/XSN+도/JX 아니/VCN+고/EC (입시생도 아니고)                            입시/NNG+생/XSN+도/JX 아니/VCN+고/EC                                                    입시생도 아니고                          
+6308  ./SXMP1902008031.json    SDRW1800000030.1080    2  팀/NNG+들/XSN+도/JX 만들/VV+어/EC (팀들도 만들어)                     다른/MMD 팀/NNG+들/XSN+도/JX 만들/VV+어/EC 보/VX+아/EF                                       다른 팀들도 만들어 봐                        
+6309  ./SXMP1902008031.json    SDRW1800000030.1146    3  아직/MAG+도/JX 그러/VV+지만/EC (아직도 그러지만)           틱틱대/VV+고/EC 뭐/IC 아직/MAG+도/JX 그러/VV+지만/EC                                             틱틱대고 뭐 아직도 그러지만                          
+6310  ./SXMP1902008031.json    SDRW1800000030.1207    8  데려오/VV+ㄹ게/EF+요/JX 그리/VV+고서/EC (데려올게요 그리고서)  ⋯ 그래서/MAJ 아/IC 제/NP+가/JKS 다음/NNG+에/JKB 꼭/MAG 데려오/VV+ㄹ게/EF+요/JX 그리/VV+고서/EC 막/MAG 사람/NNG+들/XSN+이/JKS                   ⋯ 다음에 꼭 데려올게요 그리고서 막 사람들이                   
+6311  ./SXMP1902008031.json    SDRW1800000030.1211    1  자기/NP+는/JX 무섭/VA+대/EF (자기는 무섭대)                            자기/NP+는/JX 무섭/VA+대/EF 그런/MMD 기회/NNG+가/JKS 오/VV+는/ETM 거/NNB+이/JKS                          자기는 무섭대 그런 기회가 ⋯                 
+[Corsair] Query: .*/J. ../V (6311 results)
+[Corsair] Top-10 frequency: [('것/NNB+도/JX 아니/VCN+고/EC', 66), ('저/NP+는/JX 그렇/VA+게/EC', 57), ('여기/NP+다/JX 이렇/VA+게/EC', 45), ('거/NNB+ㄴ/JX 아니/VCN+고/EC', 33), ('뿐/JX+만/JX 아니/VCN+라/EC', 31), ('거/NNB+ㄴ/JX 아니/VCN+ㄴ데/EC', 26), ('뿐/NNB+만/JX 아니/VCN+라/EC', 25), ('저/NP+는/JX 이렇/VA+게/EC', 22), ('거/NNB+ㄴ/JX 아니/VCN+지만/EC', 17), ('거/NNB+ㄴ/JX 아니/VCN+ㅂ니다/EF+./SF', 12)] ⋯
+[Corsair] Saved 6311 results to file: "corsair_export-2022-06-04-19.28.03.xlsx"
 ```
